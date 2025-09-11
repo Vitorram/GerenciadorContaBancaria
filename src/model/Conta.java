@@ -8,7 +8,7 @@ import exception.SaldoInsuficienteException;
 
 /**
  *
- * @author juliana
+ * @author Vitor
  */
 public abstract class Conta {
     protected int numero;

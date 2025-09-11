@@ -32,7 +32,7 @@ public ContaGUI() {
         contas = new ArrayList<>();
     }
 
-    // garante que as contas do arquivo também estejam no banco
+
     for (ContaCorrente c : contas) {
         try {
             dao.inserir(c);

@@ -6,7 +6,7 @@ package exception;
 
 /**
  *
- * @author juliana
+ * @author Vitor
  */
 public class SaldoInsuficienteException extends Exception {
     public SaldoInsuficienteException(String mensagem) {

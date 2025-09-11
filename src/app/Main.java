@@ -51,7 +51,7 @@ public class Main {
                 JOptionPane.showMessageDialog(null, "Não há contas cadastradas.", "Conta com maior saldo", JOptionPane.INFORMATION_MESSAGE);
             }
 
-            // Seleciona a conta pelo número
+          
             String numeroStr = JOptionPane.showInputDialog("Informe o número da conta que deseja acessar:");
             int numeroConta = Integer.parseInt(numeroStr);
             ContaCorrente contaSelect = todasContas.stream()
@@ -70,18 +70,16 @@ public class Main {
                 return;
             }
 
-            // Solicita valor para saque
             String valorStr = JOptionPane.showInputDialog("Informe o valor para saque:");
             double valor = Double.parseDouble(valorStr);
 
             try {
-                cs.sacarValor(contaSelect, valor); // realiza saque na conta selecionada
+                cs.sacarValor(contaSelect, valor); 
                 JOptionPane.showMessageDialog(null, "Saque realizado com sucesso!");
             } catch (SaldoInsuficienteException e) {
                 JOptionPane.showMessageDialog(null, e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
             }
 
-            // Atualiza arquivo com todas as contas
             cs.atualizarConta(todasContas, "conta_atualizada.txt");
 
         } catch (IOException e) {

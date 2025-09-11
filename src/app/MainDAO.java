@@ -38,12 +38,12 @@ public class MainDAO {
             if (opcao == null) break; // Cancelou
 
             try {
-                List<ContaCorrente> contas = cs.lerConta("conta.txt"); // sempre atualiza a lista do arquivo
+                List<ContaCorrente> contas = cs.lerConta("conta.txt"); 
 
                 if (opcao.equals("1")) { // Adicionar Conta
                     int numero = Integer.parseInt(JOptionPane.showInputDialog("Número da Conta:"));
 
-                    // Verifica duplicado no MySQL
+           
                    
 
                     String titular = JOptionPane.showInputDialog("Nome do Titular:");
@@ -52,8 +52,8 @@ public class MainDAO {
                     ContaCorrente nova = new ContaCorrente(numero, titular, saldo);
                     contas.add(nova);
 
-                    cs.atualizarConta(contas, "conta.txt"); // Atualiza txt
-                    dao.inserir(nova); // Insere no MySQL
+                    cs.atualizarConta(contas, "conta.txt"); 
+                    dao.inserir(nova); 
 
                     JOptionPane.showMessageDialog(null, "Conta adicionada com sucesso!");
 
