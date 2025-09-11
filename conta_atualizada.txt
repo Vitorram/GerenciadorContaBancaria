@@ -1,0 +1,3 @@
+12345,João Silva,901.0
+9998,Vitor ramos,2000.0
+888,Anna flavia,4000.0
